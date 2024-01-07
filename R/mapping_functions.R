@@ -97,9 +97,8 @@ predict_query = function(query_seurat_object,model_path,query_reduction="scvi",v
     # train
     message(max_epochs)
     vae_q$train(max_epochs=as.integer(max_epochs),
-                plan_kwargs=list(weight_decay=0.0),
-                progress_bar_refresh_rate=0
-    ) # use same epochs and weight_decay = 0
+                plan_kwargs=list(weight_decay=0.0)
+               ) # use same epochs and weight_decay = 0
 
     # results
     # get results directly into R dataframe
